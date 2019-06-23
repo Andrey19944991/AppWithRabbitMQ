@@ -2,6 +2,7 @@
 
 Вариант №1
 ![Screenshot](exchangeWithQueues1.jpg)
+<br>
 В данном проекте нужно:
 1) Запустить двух потребителей - Consumer1 и Consumer2
 2) Запустить производителя сообщений - ProducerWithExchange. Сообщения вводятся в консоль.
