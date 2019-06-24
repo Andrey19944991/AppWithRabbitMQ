@@ -9,5 +9,6 @@
 
 Вариант №2
 ![Screenshot](exchangeWithQueues2.jpg)
+(пропущена стрелка из exchange в первую очередь)
 1) Нужно запустить трёх потребителей - NewConsumer1, NewConsumer2 и NewConsumer3
 2) Запустить производителя сообщений - ProducerWithExchange. Сообщения вводятся в консоль.
