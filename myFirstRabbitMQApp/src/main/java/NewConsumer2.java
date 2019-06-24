@@ -6,7 +6,7 @@ import com.rabbitmq.client.DeliverCallback;
 public class NewConsumer2 {
 
     private static final String EXCHANGE_NAME = "exchange"; //название обмена
-    private static final String TASK_QUEUE_NAME = "task_queue";
+    private static final String TASK_QUEUE_NAME = "queue1";
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
@@ -15,6 +15,7 @@ public class NewConsumer2 {
         Channel channel = connection.createChannel();
 
         channel.exchangeDeclare(EXCHANGE_NAME,"fanout");
+        channel.queueDeclare(TASK_QUEUE_NAME, true, false, false, null);
         //String queueName=channel.queueDeclare().getQueue();
         channel.queueBind(TASK_QUEUE_NAME, EXCHANGE_NAME, ""); //связывание очереди и обмена
         System.out.println(" [*] Waiting for messages");
